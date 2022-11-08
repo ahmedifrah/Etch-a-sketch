@@ -1,7 +1,22 @@
 const container =  document.querySelector('.container');
-for (let i = 1; i < 257; i++){
-    const div = document.createElement('div');
-    div.textContent = ('hello');
-    container.appendChild(div);
+
+function makeGrid() {
+    for (let i = 1; i < 257; i++){
+        const div = document.createElement('div');
+        div.classList.add(`box${i}`);
+        div.textContent = ('hello');
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = "grey";
+        });
+        container.appendChild(div);
+    }
+
 }
+
+// function changeBoxColor(){
+//     div.style.backgroundColor = "red"
+// }
+
+makeGrid();
+
 
